@@ -501,7 +501,7 @@ if (leadForm) {
       });
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || '');
-      leadForm.hidden = true;
+      leadForm.style.display = 'none';
       document.getElementById('formSuccess').hidden = false;
     } catch (err) {
       error.textContent = (err.message ? err.message + '. ' : 'No pudimos enviar la consulta. ') + 'Se puede intentar de nuevo o escribirnos por WhatsApp.';
